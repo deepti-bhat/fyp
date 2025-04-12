@@ -1,0 +1,1 @@
+web: gunicorn app.py:flask_app_variable

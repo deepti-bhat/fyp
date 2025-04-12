@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAC AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <section class="hero overlay">
+        <header class="main-header">
+            <h1 class="source-code-pro-200">SAC AI</h1>
+        </header>
+    </section>
+
+    <nav class="navbar navbar-expand-lg internal-navbar">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#" aria-current="page">MNIST</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="loader" id="load"></div>
+
+    <main class="container-fluid">
+        <div class="row main-content">
+            <!-- Left Section -->
+            <div class="col-3 left-panel">
+                <div class="control-panel">
+                    <select class="form-select mb-3" id="algorithmSelect">
+                        <option value="sac">SAC Stack</option>
+                        <option value="maml">MAML</option>
+                        <option value="fedprox">FedProx</option>
+                        <option value="fedmeta_client">FedMeta - Client</option>
+                        <option value="fedmeta_server">FedMeta - Server</option>
+                        <option value="dpsgd_client">DP-SGD - Client</option>
+                        <option value="dpsgd_server">DP-SGD - Server</option>
+                        <option value="reptile_client">Reptile - Client</option>
+                        <option value="reptile_server">Reptile - Server</option>
+                    </select>
+                    <button class="btn btn-primary" id="submitBtn">Submit</button>
+                </div>
+                <div class="info-panel">
+                    <div class="loader" id="load"></div>
+                    <div id="info">
+                        <h3 id="info-title"></h3>
+                        <p id="info-paragraph"></p>
+                        <a id="info-link" href="" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-9 right-panel">
+                <div class="content-container">
+                    <div id="rp">
+                        <div class="image-container">
+                            <h3>Federated Learning Results</h3>
+                            <img id="metrics" style="display: block; margin: 70px auto; transform: scale(1.5); transform-origin: center;"></img>
+                        </div>
+                
+                        <div class="image-container">
+                            <div class="row">
+                                <img id="train_loss" src="https://via.placeholder.com/800x300" alt="Training Loss">
+                                <img id="train_acc" src="https://via.placeholder.com/800x300" alt="Training Accuracy">
+                            </div>
+                        </div>
+                        
+                        <div class="image-container">
+                            <div class="row">
+                                <img id="test_acc" src="https://via.placeholder.com/800x300" alt="Test Accuracy">
+                                <img id="test_loss" src="https://via.placeholder.com/800x300" alt="Test Loss">
+                            </div>
+                        </div>
+                        
+                        <div class="image-container" id="cm">
+                            <img id="confusion_matrix" src="https://via.placeholder.com/800x300" alt="Confusion Matrix">
+                        </div>
+                   </div> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/retrieveDB.js"></script>
+</body>
+</html>

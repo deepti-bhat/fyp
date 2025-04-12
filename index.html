@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAC Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <!-- Full-screen background section -->
+   <section class="hero overlay">
+        <div class="bg d-flex justify-content-center align-items-center text-center" id="home">
+            <div>
+            <h1 class="display-4 text-white title source-code-pro-200">Secure</h1>
+            <h1 class="display-4 text-white title source-code-pro-200">Adaptable</h1>
+            <h1 class="display-4 text-white title source-code-pro-200">Collaborative</h1>
+            <h1 class="display-4 text-white title-ai roboto-slab-100">Artificial Intelligence</h1>
+            <button class="btn btn-light mt-3" id="scrollDown">Know More</button>
+            </div>
+        </div>
+    </section>
+
+  <!-- About Us Section -->
+  <section class="about-us py-5" id="aboutUs">
+    <div class="container">
+      <h2 class="text-center mb-4 source-code-pro-600">About SAC AI</h2>
+      <p class="lead text-center">Federated Learning (FL) offers a decentralized framework for collaborative machine learning, enabling clients to train models locally while preserving data privacy by avoiding the need to share raw data. Although FL addresses several privacy and security concerns, it still faces critical challenges, including vulnerability to adversarial attacks, privacy leakage, and data heterogeneity across clients. These issues can significantly degrade model performance and compromise user privacy. Differential Privacy (DP) helps protect sensitive information by introducing noise, while meta-learning enhances adaptability across diverse data distributions. These techniques can be integrated into FL at various points in the architecture, with several key algorithms. The challenge seems to persist to balance security, adaptability, and model accuracy and finding an optimal algorithmic stack that would be suitable for a focus area such as CNN classifications.
+      </p>
+      <button class="btn btn-light mt-3" id="explorebtn">Explore Results</button>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form py-5" id="contactForm">
+    <div class="container">
+      <h2 class="text-center mb-4 source-code-pro-600">Contribute</h2>
+      <div class="contribute">
+      <form action="#" method="POST">
+          <!-- Name input -->
+          <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+
+          <!-- Email input -->
+          <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="data" class="form-label">Dataset</label>
+            <input type="text" class="form-control" id="data" name="data" required>
+        </div>
+          
+          <!-- Email input -->
+          <div class="mb-3">
+            <label for="os" class="form-label">Colab | GitHub | Open Source Link</label>
+            <input type="text" class="form-control" id="os" name="os" required>
+        </div>
+        <!-- Email input -->
+        
+        <!-- Email input -->
+        <div class="mb-3">
+          <label for="codedesc" class="form-label">Code Description</label>
+          <textarea class="form-control" id="codedesc" name="codedesc" required></textarea>
+      </div>
+        
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary formbtn">Contribute</button>
+      </form>
+    </div>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/notyf/notyf.min.js"></script>
+  
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap's interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
