@@ -1,8 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')  # point to your templates dir
+
 CORS(app, origins="http://127.0.0.1:5500")  # Enable CORS for frontend-backend communication
 
 connection_string = "mongodb+srv://cipher:5Df5ZYYlJ15FX0Wz@cluster0.hlaib.mongodb.net/"
@@ -30,6 +31,13 @@ algorithms = {
     'reptile_server': 'reptile_server'
 }
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/main')
+def main_page():
+    return render_template('main.html')
 @app.route('/data/<algorithm>', methods=['GET'])
 def get_data(algorithm):
     if algorithm not in algorithms:
